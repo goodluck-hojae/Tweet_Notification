@@ -10,10 +10,10 @@ import TweetBot as LT
 #Twitter Auth
 
 # it's about time to create a TwitterSearch object with our secret tokens
-consumer_key = 'W26NNy6uylLp3mxqnV7cn8Qqz'
-consumer_secret = '	8sn8M4PGfMO8Xt1SYPCWyTVVWhHrhvl6LmTCXZKur641wKR9Ia'
-access_token_key = '912715351355383808-OwpvxPRotKpCSUf9CprZrnsiBtUGPnG'
-access_token_secret = 'b89R6GNbPnrYIV4lbDOs0eRgqnJerEczyMQckyc75ONGF'
+consumer_key = '5z0sfk6FYOa6HQwsW50o2rcTc'
+consumer_secret = 'uSf6mPLhqVew9QyWsFUp8N6cUEpBDRNwrU48hRpsMrJzOId7UK'
+access_token_key = '912715351355383808-ExBFy5wIibRYYuKnjGRarHtzNxXPPnG'
+access_token_secret = 'p4VlHmYZwSSUNakbUVz4xU0qrqdX8Vo2EkWXMMu7jkmfR'
 
 
 keys = [consumer_key, consumer_secret, access_token_key, access_token_secret]
@@ -31,8 +31,18 @@ _thread.start_new_thread(tweetBot.get_last_tweet,('get_last_tweet',))
 for idx,twitter_name_with_id in enumerate(twitter_name_with_ids):
     tweetBot_screenName, tweetBot_id = twitter_name_with_id.split(' ')
     print(str(idx)+' '+tweetBot_id+" "+tweetBot_screenName)
-    tweetBot = LT.TweetBot(keys=keys, user_id=tweetBot_id)
-    _thread.start_new_thread(tweetBot.get_last_tweet,('get_last_tweet',))
+    try:
+        tweetBot = LT.TweetBot(keys=keys, user_id=tweetBot_id)
+        _thread.start_new_thread(tweetBot.get_last_tweet,('get_last_tweet',))
+        time.sleep(10)
+    except:
+        print("sleep for 2mins")
+        time.sleep(60 * 2)
+        print("start again")
+        continue
+
+
+
 
 while True:
     time.sleep(10)

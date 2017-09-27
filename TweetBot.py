@@ -21,8 +21,17 @@ class TweetBot:
             self.client = tweepy.API(auth)
             if not self.client.verify_credentials():
                 raise tweepy.TweepError
-        except tweepy.TweepError as e: 
+        except tweepy.TweepError as e:
             print('ERROR : connection failed. Check your OAuth keys.')
+            if e == "[{u'message': u'Rate limit exceeded', u'code': 88}]":
+                print('Thread is sleeping for 5 mins!')
+                time.sleep(60 * 5)  # Sleep for 5 minutes
+                print('Thread is starting again')
+            else:
+                print(e)
+                print('Thread is sleeping for 5 mins')
+                time.sleep(60 * 5)  # Sleep for 5 minutes
+                print('Thread is starting again')
         else:
             print('Connected as @{}, you can start to tweet !'.format(self.client.me().screen_name))
             self.client_id = user_id
@@ -36,8 +45,8 @@ class TweetBot:
                     print(tweet.id)
                     print(tweet.text)
                     prev_tweet = tweet.text
-
-                    TB.sendToTelebot(tweet.text)
+                    if prev_tweet != None:
+                        TB.sendToTelebot(tweet.text)
             except tweepy.TweepError:
                 time.sleep(60 * 10)
                 print('TweepError')

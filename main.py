@@ -11,18 +11,13 @@ access_token_key = '912715351355383808-ExBFy5wIibRYYuKnjGRarHtzNxXPPnG'
 access_token_secret = 'p4VlHmYZwSSUNakbUVz4xU0qrqdX8Vo2EkWXMMu7jkmfR'
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token_key, access_token_secret)
-
 if __name__ == '__main__':
 
     twitter_name_id_file = open('twitter_name_id')
     id_list = []
 
-    # admin
-    id_list.append('912715351355383808') # @dr_coder_kr -> admin
-
     # allowed twitter name
     twitter_name = set()
-    twitter_name.add('dr_coder_kor')
 
     # adding twitter list
     for x in twitter_name_id_file.readlines():
@@ -32,4 +27,4 @@ if __name__ == '__main__':
 
     twitterListener = TwitterListener.TwitterListener(twitter_name)
     twitterStream = Stream(auth, twitterListener)
-    twitterStream.filter(follow=id_list[:186])
+    twitterStream.filter(follow=id_list[:len(twitter_name)])

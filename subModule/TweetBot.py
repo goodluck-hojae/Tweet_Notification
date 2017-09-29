@@ -47,9 +47,10 @@ class TweetBot:
                     prev_tweet = tweet.text
                     if prev_tweet != None:
                         TB.sendToTelebot(tweet.text)
-            except tweepy.TweepError:
+            except tweepy.TweepError as e:
                 time.sleep(60 * 10)
-                print('TweepError')
+                print('Tweepy Error')
+                print(e)
                 continue
             except AttributeError:
                 time.sleep(60 * 10)

@@ -1,48 +1,35 @@
-import sys
-import time
-import telepot
-from telepot.loop import MessageLoop
-import _thread
-import datetime
-from pprint import pprint
-import TweetBot as LT
 
-#Twitter Auth
+from tweepy import StreamListener
+from tweepy import Stream
+import tweepy
+import json
+import TwitterListener
 
-# it's about time to create a TwitterSearch object with our secret tokens
 consumer_key = '5z0sfk6FYOa6HQwsW50o2rcTc'
 consumer_secret = 'uSf6mPLhqVew9QyWsFUp8N6cUEpBDRNwrU48hRpsMrJzOId7UK'
 access_token_key = '912715351355383808-ExBFy5wIibRYYuKnjGRarHtzNxXPPnG'
 access_token_secret = 'p4VlHmYZwSSUNakbUVz4xU0qrqdX8Vo2EkWXMMu7jkmfR'
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token_key, access_token_secret)
 
+if __name__ == '__main__':
 
-keys = [consumer_key, consumer_secret, access_token_key, access_token_secret]
+    twitter_name_id_file = open('twitter_name_id')
+    id_list = []
 
-twitter_id_file = open('twitter_id')
+    # admin
+    id_list.append('912715351355383808') # @dr_coder_kr -> admin
 
-twitter_name_with_ids = [x.strip() for x in twitter_id_file.readlines()]
-print(twitter_name_with_ids)
+    # allowed twitter name
+    twitter_name = set()
+    twitter_name.add('dr_coder_kor')
 
-tweetBot = LT.TweetBot(keys=keys, user_id=896471765047664640)
-_thread.start_new_thread(tweetBot.get_last_tweet,('get_last_tweet',))
-tweetBot = LT.TweetBot(keys=keys, user_id=912715351355383808)
-_thread.start_new_thread(tweetBot.get_last_tweet,('get_last_tweet',))
+    # adding twitter list
+    for x in twitter_name_id_file.readlines():
+        twitter, id = x.split()
+        twitter_name.add(twitter.lower())
+        id_list.append(id)
 
-for idx,twitter_name_with_id in enumerate(twitter_name_with_ids):
-    tweetBot_screenName, tweetBot_id = twitter_name_with_id.split(' ')
-    print(str(idx)+' '+tweetBot_id+" "+tweetBot_screenName)
-    try:
-        tweetBot = LT.TweetBot(keys=keys, user_id=tweetBot_id)
-        _thread.start_new_thread(tweetBot.get_last_tweet,('get_last_tweet',))
-        time.sleep(10)
-    except:
-        print("sleep for 2mins")
-        time.sleep(60 * 2)
-        print("start again")
-        continue
-
-
-
-
-while True:
-    time.sleep(10)
+    twitterListener = TwitterListener.TwitterListener(twitter_name)
+    twitterStream = Stream(auth, twitterListener)
+    twitterStream.filter(follow=id_list[:186])

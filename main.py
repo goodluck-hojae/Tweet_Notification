@@ -4,7 +4,7 @@ from tweepy import Stream
 import tweepy
 import json
 import TwitterListener
-
+import threading
 consumer_key = '5z0sfk6FYOa6HQwsW50o2rcTc'
 consumer_secret = 'uSf6mPLhqVew9QyWsFUp8N6cUEpBDRNwrU48hRpsMrJzOId7UK'
 access_token_key = '912715351355383808-ExBFy5wIibRYYuKnjGRarHtzNxXPPnG'
@@ -25,7 +25,11 @@ if __name__ == '__main__':
         twitter_name.add(twitter.lower())
         id_list.append(id)
 
-    print('listening..')
+    print(len(twitter_name))
     twitterListener = TwitterListener.TwitterListener(twitter_name)
-    twitterStream = Stream(auth, twitterListener)
-    twitterStream.filter(follow=id_list[:len(twitter_name)])
+    twitterStream1 = Stream(auth, twitterListener)
+    twitterStream2 = Stream(auth, twitterListener)
+
+    print('connecting..')
+    twitterStream1.filter(follow=id_list[:len(id_list)], async=True)
+    print('listening..')

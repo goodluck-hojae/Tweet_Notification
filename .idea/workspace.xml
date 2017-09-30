@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/TwitterListener.py" line="20" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0b80cd0-1a83-40c1-b767-78fce5544088" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-    </list>
+    <list default="true" id="f0b80cd0-1a83-40c1-b767-78fce5544088" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,9 +179,9 @@
         <option value="$PROJECT_DIR$/subModule/TweetBot.py" />
         <option value="$PROJECT_DIR$/twitter_name_id" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/TelegramBot.py" />
         <option value="$PROJECT_DIR$/TwitterListener.py" />
         <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/TelegramBot.py" />
       </list>
     </option>
   </component>
@@ -517,7 +514,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1929" y="-9" width="1618" height="868" extended-state="7" />
+    <frame x="-1929" y="-9" width="1618" height="868" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35927367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

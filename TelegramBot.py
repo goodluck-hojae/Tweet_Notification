@@ -1,6 +1,6 @@
 import sys
 import telepot
-from got import Translator
+from googletrans import Translator
 TOKEN = '347870649:AAF2ZfpdDTjssV7mMwJifC3tIfD_gBDUwuU' #sys.argv[1]  # get token from command-line
 print(TOKEN)
 teleBot = telepot.Bot(TOKEN)

@@ -18,7 +18,6 @@ twitter_id_file = open('twitter_name_id')
 
 twitter_name_with_ids = [x.strip() for x in twitter_id_file.readlines()]
 print(twitter_name_with_ids)
-
 tweetBot = LT.TweetBot(keys=keys, user_id=896471765047664640)
 _thread.start_new_thread(tweetBot.get_last_tweet,('get_last_tweet',))
 tweetBot = LT.TweetBot(keys=keys, user_id=912715351355383808)

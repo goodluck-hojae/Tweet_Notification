@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f0b80cd0-1a83-40c1-b767-78fce5544088" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TelegramBot.py" afterPath="$PROJECT_DIR$/TelegramBot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/twitter_name_id" afterPath="$PROJECT_DIR$/twitter_name_id" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,16 +21,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="twitter_list" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/twitter_list">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="128" column="6" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TelegramBot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TelegramBot.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,6 +33,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="twitter_list" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/twitter_list">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="128" column="6" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,16 +51,6 @@
               <folding>
                 <element signature="e#1#34#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="streaming.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/tweepy/streaming.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="251" column="5" lean-forward="true" selection-start-line="251" selection-start-column="5" selection-end-line="251" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,24 +95,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitterListener.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TwitterListener.py">
+      <file leaf-file-name="twitter_name_id" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/twitter_name_id">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="24" column="77" lean-forward="true" selection-start-line="24" selection-start-column="77" selection-end-line="24" selection-end-column="77" />
-              <folding>
-                <element signature="e#1#34#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="92">
+              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter_name_id" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/twitter_name_id">
+      <file leaf-file-name="bittrex_twitter_list" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bittrex_twitter_list">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="241" column="31" lean-forward="false" selection-start-line="241" selection-start-column="31" selection-end-line="241" selection-end-column="31" />
+            <state relative-caret-position="748">
+              <caret line="132" column="9" lean-forward="true" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_bittrex_coinname.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/subModule/get_bittrex_coinname.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,9 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>retweet</find>
-      <find>reply_count</find>
-      <find>retweeted_status</find>
       <find>vergecurrency</find>
       <find>dr_coder_kor</find>
       <find>AttributeError</find>
@@ -170,6 +165,9 @@
       <find>dr_coder</find>
       <find>d</find>
       <find>436399842</find>
+      <find>TRIG</find>
+      <find>bch</find>
+      <find>cash</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,9 +194,9 @@
         <option value="$PROJECT_DIR$/subModule/main.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/hmac.py" />
         <option value="$PROJECT_DIR$/subModule/get_tweeter_id_with_screenname.py" />
-        <option value="$PROJECT_DIR$/twitter_name_id" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/TelegramBot.py" />
+        <option value="$PROJECT_DIR$/twitter_name_id" />
       </list>
     </option>
   </component>
@@ -247,6 +245,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Tweet_Bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_Bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_Bot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subModule" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -830,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bittrex_twitter_list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2958">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/subModule/bittrex_twitter_screenname">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -890,16 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/subModule/get_bittrex_coinname.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/subModule/get_tweeter_id_with_screenname.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -914,14 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/twitter_list">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="128" column="6" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -996,10 +982,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bittrex_twitter_list">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="132" column="9" lean-forward="true" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subModule/get_bittrex_coinname.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter_list">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="128" column="6" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/twitter_name_id">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="241" column="31" lean-forward="false" selection-start-line="241" selection-start-column="31" selection-end-line="241" selection-end-column="31" />
+        <state relative-caret-position="92">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
       </provider>

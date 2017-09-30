@@ -25,6 +25,7 @@ if __name__ == '__main__':
         twitter_name.add(twitter.lower())
         id_list.append(id)
 
+    print('listening..')
     twitterListener = TwitterListener.TwitterListener(twitter_name)
     twitterStream = Stream(auth, twitterListener)
     twitterStream.filter(follow=id_list[:len(twitter_name)])

@@ -18,7 +18,8 @@ class TwitterListener(StreamListener):
         try:
             if 'user' in tweet.keys():
                 screen_name = tweet['user']['screen_name'].lower()
-                print(screen_name + 'is in the list ->' + str(screen_name in self.twitter_name))
+                if screen_name in self.twitter_name:
+                    print(screen_name + 'is in the list ->')
                 if screen_name in self.twitter_name :
                     # CHECK Retweet
                     if not 'RT' in tweet['text'][:3] and not '@' in tweet['text'][:3] :

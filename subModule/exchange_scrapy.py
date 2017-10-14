@@ -40,13 +40,12 @@ class BinanceSpider(scrapy.Spider):
         # repetition
         print(self.i)
         self.i += 1
-        time.sleep(60)
-        yield Request(url=response.url, callback=self.parse_binance, dont_filter=True)
+        yield Request(url=response.url, callback=self.parse_bithumb, dont_filter=True)
 
     def parse_bithumb(self, response):
         try:
             bithumb_notice_file = open('bithumb_notice', 'r+')
-            bithumb_news = response.css("h3.entry-title > a::text").extract_first()
+            bithumb_news = Translator().translate(response.css("h3.entry-title > a::text").extract_first(),dest='en').text
             detail_url = response.css("h3.entry-title > a::attr(href)").extract_first()
             file_contents = bithumb_notice_file.readlines()[-1]
             file_contents = file_contents.split('#')
@@ -62,13 +61,12 @@ class BinanceSpider(scrapy.Spider):
                 sendToTelebot(new_list)
                 bithumb_notice_file.seek(0, 2)
                 bithumb_notice_file.write('\n'+new_list['title'] + '#' + new_list['url'])
-                #bithumb_notice_file.write(Translator().translate(new_list['title'],dest='en').text + ',' + new_list['url']+'\n')
 
             # repetition
             print(self.i)
             self.i += 1
+            yield Request(url=response.url, callback=self.parse_binance, dont_filter=True)
             time.sleep(60)
-            yield Request(url=response.url, callback=self.parse_bithumb, dont_filter=True)
         except IndexError as e:
             print(e)
 

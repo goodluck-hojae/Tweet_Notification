@@ -21,35 +21,36 @@ class BinanceSpider(scrapy.Spider):
 
     def parse_binance(self, response):
         binance_listing_file = open('binance_listing', 'r+')
-        binance_news = response.css('li.article-list-item > a::text').extract()[0]
-        detail_url = response.css('li.article-list-item > a::attr(href)').extract()[0]
+        binance_news = response.css('li.article-list-item > a::text').extract_first()
+        detail_url = response.css('li.article-list-item > a::attr(href)').extract_first()
         file_contents =  binance_listing_file.readlines()[-1]
         file_contents = file_contents.split('#')
-        print(file_contents)
         prev_title, prev_url = file_contents
         prev = {'title' : prev_title,
                 'url' : prev_url}
         yield prev
-        if prev_title != binance_news:
+        if prev_title.strip() != binance_news.strip():
+            print('bool')
+            print(prev_title.strip() + ' ' + binance_news.strip())
             new_list = {'title': binance_news,
              'url': self.base_url + detail_url}
             yield new_list
             sendToTelebot(new_list)
             binance_listing_file.seek(0, 2)
             binance_listing_file.write('\n'+new_list['title']+'#'+new_list['url'])
-        # repetition
+        # repetition/home/hojae/Documents
         print(self.i)
         self.i += 1
-        yield Request(url=response.url, callback=self.parse_bithumb, dont_filter=True)
+        binance_listing_file.close()
+        yield Request(url=response.url, callback=self.parse_binance, dont_filter=True)
 
     def parse_bithumb(self, response):
         try:
             bithumb_notice_file = open('bithumb_notice', 'r+')
-            bithumb_news = Translator().translate(response.css("h3.entry-title > a::text").extract_first(),dest='en').text
+            bithumb_news = Translator().translate(str(response.css("h3.entry-title > a::text").extract_first()),dest='en').text
             detail_url = response.css("h3.entry-title > a::attr(href)").extract_first()
             file_contents = bithumb_notice_file.readlines()[-1]
             file_contents = file_contents.split('#')
-            print(file_contents)
             prev_title, prev_url = file_contents
             prev = {'title': prev_title,
                     'url': prev_url}
@@ -65,8 +66,9 @@ class BinanceSpider(scrapy.Spider):
             # repetition
             print(self.i)
             self.i += 1
-            yield Request(url=response.url, callback=self.parse_binance, dont_filter=True)
-            time.sleep(60)
+            bithumb_notice_file.close()
+            yield Request(url=response.url, callback=self.parse_bithumb, dont_filter=True)
+            time.sleep(10)
         except IndexError as e:
             print(e)
 

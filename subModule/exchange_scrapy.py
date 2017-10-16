@@ -61,6 +61,9 @@ class BinanceSpider(scrapy.Spider):
             if prev_title != bithumb_news:
                 new_list = {'title': bithumb_news,
                             'url': detail_url}
+                print('bithumb news ' + bithumb_news)
+                print('prev title ' + prev_title)
+                print(str(prev_title != bithumb_news))
                 yield new_list
                 sendToTelebot(new_list['title'],new_list['url'])
                 bithumb_notice_file.seek(0, 2)

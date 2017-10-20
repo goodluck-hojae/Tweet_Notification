@@ -8,6 +8,7 @@ import codecs
 from googletrans import Translator
 import json
 import rdd_status
+import _thread
 # scrapy genspider quotes toscrape.com
 
 class BinanceSpider(scrapy.Spider):
@@ -15,8 +16,18 @@ class BinanceSpider(scrapy.Spider):
     allowed_domains = ['https://support.binance.com/hc/en-us/sections/115000106672-New-Listings','http://bithumb.cafe/notice','http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239']
     start_urls = ['http://support.binance.com/hc/en-us/sections/115000106672-New-Listings','http://bithumb.cafe/notice','http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239']
     base_url = 'http://support.binance.com'
+
     i = 0
     def parse(self, resposne):
+        def rdd_msg_handling(i):
+            while True:
+                rdd_msg, ask_number, bid_number = rdd_status.rdd_status()
+                if ask_number < 5 or bid_number < 5 or i == 0:
+                    sendToTelebot('RDD Alert \n' + rdd_msg)
+                    time.sleep(600)
+                time.sleep(60)
+
+        _thread.start_new_thread(rdd_msg_handling,(self.i,))
         yield Request(url=self.allowed_domains[0], callback=self.parse_binance, dont_filter=True)
         yield Request(url=self.allowed_domains[1], callback=self.parse_bithumb, dont_filter=True)
         yield Request(url=self.allowed_domains[2], callback=self.parse_bittrex, dont_filter=True)
@@ -93,9 +104,7 @@ class BinanceSpider(scrapy.Spider):
 
             bittrex_notice_file.close()
             # get rdd status
-            rdd_msg, ask_number, bid_number = rdd_status.rdd_status()
-            if ask_number < 5 or bid_number < 5:
-                sendToTelebot(rdd_msg)
+
             yield Request(url=response.url, callback=self.parse_bittrex, dont_filter=True)
 
         except IndexError as e:
@@ -107,7 +116,6 @@ TOKEN = '311962567:AAGzqgnoQrAsYpqB6lKHW5Rns9YsupyLp0s'  # sys.argv[1]  # get to
 print(TOKEN)
 teleBot = telepot.Bot(TOKEN)
 translator = Translator()
-
 # Telegram Send Messagedd
 def sendToTelebot(title, url=''):
     tele_users = teleBot.getUpdates(offset=100000001)

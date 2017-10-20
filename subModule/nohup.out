@@ -11223,3 +11223,73 @@
 2017-10-14 18:47:52 [urllib3.connectionpool] DEBUG: https://translate.google.com:443 "GET /translate_a/single?dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&tl=en&oe=UTF-8&tk=962573.578631&ssel=0&ie=UTF-8&otf=1&client=t&tsel=0&q=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%28ETH%29+%EB%B9%84%EC%9E%94%ED%8B%B0%EC%9B%80+%ED%95%98%EB%93%9C%ED%8F%AC%ED%81%AC+%EA%B4%80%EB%A0%A8+%EA%B3%B5%EC%A7%80&sl=auto&hl=en HTTP/1.1" 200 None
 2017-10-14 18:47:52 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bithumb.cafe/notice>
 {'url': 'http://bithumb.cafe/archives/12888', 'title': 'Etherium (ETH) Byzantium hard fork notice'}
+2017-10-20 07:13:18 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: scrapybot)
+2017-10-20 07:13:18 [scrapy.utils.log] INFO: Overridden settings: {'SPIDER_LOADER_WARN_ONLY': True}
+2017-10-20 07:13:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-10-20 07:13:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-10-20 07:13:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-10-20 07:13:18 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-10-20 07:13:18 [scrapy.core.engine] INFO: Spider opened
+2017-10-20 07:13:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-10-20 07:13:18 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-10-20 07:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: None)
+2017-10-20 07:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (referer: None)
+2017-10-20 07:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (referer: http://support.binance.com/hc/en-us/sections/115000106672-New-Listings)
+2017-10-20 07:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (referer: http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239)
+2017-10-20 07:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: http://support.binance.com/hc/en-us/sections/115000106672-New-Listings)
+2017-10-20 07:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239)
+2017-10-20 07:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (referer: http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239)
+2017-10-20 07:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.binance.com/hc/en-us/sections/115000106672-New-Listings>
+{'url': 'http://support.binance.com/hc/en-us/articles/115002273032-Binance-Lists-DASH', 'title': 'Binance Lists DASH'}
+2017-10-20 07:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.binance.com/hc/en-us/sections/115000106672-New-Listings>
+{'url': 'http://support.binance.com/hc/en-us/articles/115002273032-Binance-Lists-DASH', 'title': 'Binance Lists DASH'}
+2017-10-20 07:13:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (referer: http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239)
+2017-10-20 07:13:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bithumb.cafe/notice> (referer: None)
+2017-10-20 07:13:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bithumb.cafe/notice> (referer: http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239)
+2017-10-20 07:13:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bithumb.cafe/notice> (referer: http://support.binance.com/hc/en-us/sections/115000106672-New-Listings)
+2017-10-20 07:13:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: https://support.binance.com/hc/en-us/sections/115000106672-New-Listings)
+2017-10-20 07:13:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: https://support.binance.com/hc/en-us/sections/115000106672-New-Listings)
+2017-10-20 07:13:40 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): translate.google.com
+2017-10-20 07:13:40 [urllib3.connectionpool] DEBUG: https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+2017-10-20 07:13:41 [urllib3.connectionpool] DEBUG: https://translate.google.com:443 "GET /translate_a/single?hl=en&tsel=0&ssel=0&client=t&oe=UTF-8&otf=1&sl=auto&tk=206278.344329&tl=en&ie=UTF-8&q=%ED%80%80%ED%85%80%28QTUM%29%EC%83%81%EC%9E%A5+%EB%B0%8F+%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B3%B5%EC%A7%80&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t HTTP/1.1" 200 None
+2017-10-20 07:13:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bithumb.cafe/notice>
+{'url': 'http://bithumb.cafe/archives/13114', 'title': 'Quantum (QTUM) listing and event announcement'}
+2017-10-20 07:13:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (referer: http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239)
+2017-10-20 07:13:41 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): translate.google.com
+2017-10-20 07:13:41 [urllib3.connectionpool] DEBUG: https://translate.google.com:443 "GET / HTTP/1.1" 200 None
+2017-10-20 07:13:41 [urllib3.connectionpool] DEBUG: https://translate.google.com:443 "GET /translate_a/single?hl=en&tsel=0&ssel=0&client=t&oe=UTF-8&otf=1&sl=auto&tk=206278.344329&tl=en&ie=UTF-8&q=%ED%80%80%ED%85%80%28QTUM%29%EC%83%81%EC%9E%A5+%EB%B0%8F+%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B3%B5%EC%A7%80&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t HTTP/1.1" 200 None
+2017-10-20 07:13:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://bithumb.cafe/notice>
+{'url': 'http://bithumb.cafe/archives/13114', 'title': 'Quantum (QTUM) listing and event announcement'}
+2017-10-20 07:13:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (referer: http://bithumb.cafe/notice)
+2017-10-20 07:13:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: http://bithumb.cafe/notice)
+2017-10-20 07:13:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.binance.com/hc/en-us/sections/115000106672-New-Listings>
+{'url': 'http://support.binance.com/hc/en-us/articles/115002273032-Binance-Lists-DASH', 'title': 'Binance Lists DASH'}
+2017-10-20 07:13:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.binance.com/hc/en-us/sections/115000106672-New-Listings>
+{'url': 'http://support.binance.com/hc/en-us/articles/115002273032-Binance-Lists-DASH', 'title': 'Binance Lists DASH'}
+2017-10-20 07:14:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://bithumb.cafe/notice> (referer: http://bithumb.cafe/notice)
+2017-10-20 07:14:01 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://bittrex.com/api/v2.0/pub/currencies/GetWalletHealth?_=1508076591239> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionDone: Connection was closed cleanly.>]
+2017-10-20 07:14:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: https://support.binance.com/hc/en-us/sections/115000106672-New-Listings)
+2017-10-20 07:14:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.binance.com/hc/en-us/sections/115000106672-New-Listings> (referer: https://support.binance.com/hc/en-us/sections/115000106672-New-Listings)
+2017-10-20 07:14:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.binance.com/hc/en-us/sections/115000106672-New-Listings>
+{'url': 'http://support.binance.com/hc/en-us/articles/115002273032-Binance-Lists-DASH', 'title': 'Binance Lists DASH'}

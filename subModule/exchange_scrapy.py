@@ -45,7 +45,7 @@ class BinanceSpider(scrapy.Spider):
         self.i += 1
         binance_listing_file.close()
         yield Request(url=response.url, callback=self.parse_binance, dont_filter=True)
-        time.sleep(10)
+        time.sleep(60)
 
     def parse_bithumb(self, response):
         try:

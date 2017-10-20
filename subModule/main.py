@@ -36,8 +36,5 @@ for idx,twitter_name_with_id in enumerate(twitter_name_with_ids):
         print("start again")
         continue
 
-
-
-
 while True:
     time.sleep(10)

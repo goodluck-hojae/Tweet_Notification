@@ -11,4 +11,4 @@ def rdd_status():
     msg = 'rdd ask price : '+ str(rdd_asks_price) + ' remaining asks(BTC) -> ' + str(rdd_asks_price *
                                                                                      rdd_asks_number)+'\n'\
           +'rdd bid price : ' + str(rdd_bids_price) + ' remaining bids(BTC) -> ' + str(rdd_bids_price * rdd_bids_number)
-    return msg, rdd_asks_number, rdd_bids_number
+    return msg, rdd_asks_price * rdd_asks_number, rdd_bids_price * rdd_bids_number
